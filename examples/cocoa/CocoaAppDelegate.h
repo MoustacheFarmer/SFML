@@ -27,7 +27,7 @@
 #import <SFML/Graphics.hpp>
 
 /*
- * NB : We need pointers for C++ objects fields in Obj-C interface !
+ * NB: We need pointers for C++ objects fields in Obj-C interface !
  *      The recommended way is to use PIMP idiom.
  *
  *      It's elegant. Moreover, we do no constrain
