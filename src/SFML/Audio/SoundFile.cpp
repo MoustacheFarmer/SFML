@@ -378,7 +378,7 @@ sf_count_t SoundFile::Memory::seek(sf_count_t offset, int whence, void* user)
         case SEEK_SET: position = offset;                                   break;
         case SEEK_CUR: position = memory->current - memory->begin + offset; break;
         case SEEK_END: position = memory->size - offset;                    break;
-        default: position = 0;                                        break;
+        default:       position = 0;                                        break;
     }
 
     if (position >= memory->size)

@@ -317,12 +317,12 @@ JoystickCaps JoystickImpl::getCapabilities() const
             case ABS_Z:
             case ABS_THROTTLE: caps.axes[Joystick::Z]    = true; break;
             case ABS_RZ:
-            case ABS_RUDDER:    caps.axes[Joystick::R]    = true; break;
+            case ABS_RUDDER:   caps.axes[Joystick::R]    = true; break;
             case ABS_RX:       caps.axes[Joystick::U]    = true; break;
             case ABS_RY:       caps.axes[Joystick::V]    = true; break;
             case ABS_HAT0X:    caps.axes[Joystick::PovX] = true; break;
             case ABS_HAT0Y:    caps.axes[Joystick::PovY] = true; break;
-            default: break;
+            default:           break;
         }
     }
 
@@ -357,12 +357,12 @@ JoystickState JoystickImpl::JoystickImpl::update()
                     case ABS_Z:
                     case ABS_THROTTLE: m_state.axes[Joystick::Z]    = value; break;
                     case ABS_RZ:
-                    case ABS_RUDDER:    m_state.axes[Joystick::R]    = value; break;
+                    case ABS_RUDDER:   m_state.axes[Joystick::R]    = value; break;
                     case ABS_RX:       m_state.axes[Joystick::U]    = value; break;
                     case ABS_RY:       m_state.axes[Joystick::V]    = value; break;
                     case ABS_HAT0X:    m_state.axes[Joystick::PovX] = value; break;
                     case ABS_HAT0Y:    m_state.axes[Joystick::PovY] = value; break;
-                    default: break;
+                    default:           break;
                 }
                 break;
             }

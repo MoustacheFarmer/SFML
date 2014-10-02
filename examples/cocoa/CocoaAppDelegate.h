@@ -28,10 +28,10 @@
 
 /*
  * NB: We need pointers for C++ objects fields in Obj-C interface !
- *      The recommended way is to use PIMP idiom.
+ *     The recommended way is to use PIMPL idiom.
  *
- *      It's elegant. Moreover, we do no constrain
- *      other file including this one to be Obj-C++.
+ *     It's elegant. Moreover, we do no constrain
+ *     other file including this one to be Obj-C++.
  */
 
 struct SFMLmainWindow;
