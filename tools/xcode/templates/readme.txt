@@ -36,7 +36,7 @@ Prerequisites
 
 Before installing the template, make sure you have installed:
 
- - Xcode 4 or Xcode 5, up to date
+ - Xcode 4, 5 or 6, up to date
  - Installed Xcode's Command Line Tools
  - SFML 2, either framework or dylib binaries
 
