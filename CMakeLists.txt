@@ -272,8 +272,9 @@ if(SFML_OS_WINDOWS)
 elseif(SFML_OS_MACOSX)
 
     # install the non-standard frameworks SFML depends on
-    install(DIRECTORY extlibs/libs-osx/Frameworks/sndfile.framework DESTINATION ${CMAKE_INSTALL_FRAMEWORK_PREFIX})
-    install(DIRECTORY extlibs/libs-osx/Frameworks/freetype.framework DESTINATION ${CMAKE_INSTALL_FRAMEWORK_PREFIX})
+    foreach(FRAMEWORK "FLAC" "freetype" "ogg" "vorbis" "vorbisenc" "vorbisfile")
+        install(DIRECTORY "extlibs/libs-osx/Frameworks/${FRAMEWORK}.framework" DESTINATION ${CMAKE_INSTALL_FRAMEWORK_PREFIX})
+    endforeach()
 
     # install the Xcode templates if requested
     if(SFML_INSTALL_XCODE_TEMPLATES)
