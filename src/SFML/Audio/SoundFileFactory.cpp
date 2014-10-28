@@ -67,16 +67,12 @@ SoundFileReader* SoundFileFactory::createReaderFromFilename(const std::string& f
     // Register the built-in readers/writers on first call
     ensureDefaultReadersWritersRegistered();
 
-    // Wrap the input file into a file stream
-    FileInputStream stream;
-    if (!stream.open(filename))
-        return NULL;
-
     // Test the filename in all the registered factories
     for (ReaderFactoryArray::const_iterator it = s_readers.begin(); it != s_readers.end(); ++it)
     {
-        stream.seek(0);
-        if (it->check(stream))
+        // Wrap the input file into a file stream
+        FileInputStream stream;
+        if (stream.open(filename) && it->check(stream))
             return it->create();
     }
 
