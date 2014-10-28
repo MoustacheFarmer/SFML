@@ -171,7 +171,7 @@ namespace
         }
     }
 
-    void streamError(const FLAC__StreamDecoder*, FLAC__StreamDecoderErrorStatus status, void* clientData)
+    void streamError(const FLAC__StreamDecoder*, FLAC__StreamDecoderErrorStatus, void* clientData)
     {
         sf::priv::SoundFileReaderFlac::ClientData* data = static_cast<sf::priv::SoundFileReaderFlac::ClientData*>(clientData);
         data->error = true;
